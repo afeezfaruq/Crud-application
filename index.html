@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>CRUD Application</h1>
+    </header>
+
+    <main class="container">
+        <!-- Form for adding/editing items -->
+        <section class="form-container">
+            <input type="hidden" id="editId">
+            <div class="input-group">
+                <input type="text" id="titleInput" placeholder="Enter title">
+                <textarea id="contentInput" placeholder="Enter content"></textarea>
+                <div class="image-input">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <small>Supported formats: JPG, PNG, GIF (max 2MB)</small>
+                </div>
+            </div>
+            <button onclick="handleSubmit()" id="submitBtn">Add Item</button>
+        </section>
+
+        <!-- List of items -->
+        <section class="items-container">
+            <h2>Items List</h2>
+            <div id="itemsList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CRUD Application. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
