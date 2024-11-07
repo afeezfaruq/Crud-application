@@ -14,16 +14,109 @@
     <main class="container">
         <!-- Form for adding/editing items -->
         <section class="form-container">
+            <form method="POST" action="">
             <input type="hidden" id="editId">
             <div class="input-group">
-                <input type="text" id="titleInput" placeholder="Enter title">
-                <textarea id="contentInput" placeholder="Enter content"></textarea>
+                <input required type="text" id="titleInput" placeholder="Enter title" value="New title">
+                <input type="password" id="passwordInput" placeholder="Enter password" value="New password">
+                <input type="number" id="numberInput" placeholder="Enter number" value="23343">
+                <input type="email" id="emailInput" placeholder="Enter email" value="EMAIL@EXAMPLE.COM">
+                <textarea id="contentInput" placeholder="Enter content">New content</textarea>
                 <div class="image-input">
                     <input type="file" id="imageInput" accept="image/*">
                     <small>Supported formats: JPG, PNG, GIF (max 2MB)</small>
                 </div>
+                <!-- Checkbox group -->
+                
+                <div class="radio-options">
+                    <div class="option-item">
+                        <input type="checkbox" id="checkboxInput" name="agreement" value="1" checked>
+                        <label for="checkboxInput">I agree to the terms and conditions</label>
+                    </div>
+                    <div class="option-item">
+                        <input type="checkbox" id="newsletterCheckbox" name="newsletter">
+                        <label for="newsletterCheckbox">Subscribe to our newsletter</label>
+                    </div>
+                </div>
+                <div class="input-group-item">
+                    <p>Select your preferred contact method:</p>
+                    <div class="radio-options">
+                        <div class="option-item">
+                            <input type="radio" id="radioEmail" name="contactMethod" value="email">
+                            <label for="radioEmail">Email</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="radioPhone" name="contactMethod" value="phone" checked>
+                            <label for="radioPhone">Phone</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="radioSMS" name="contactMethod" value="sms">
+                            <label for="radioSMS">SMS</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="radioMail" name="contactMethod" value="mail">
+                            <label for="radioMail">Postal Mail</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="radioNone" name="contactMethod" value="none">
+                            <label for="radioNone">No Contact</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group-item">
+                    <p>Choose your preferred notification frequency:</p>
+                    <div class="radio-options">
+                        <div class="option-item">
+                            <input type="radio" id="radioDaily" name="notificationFreq" value="daily">
+                            <label for="radioDaily">Daily Updates (Receive updates every 24 hours)</label>
+                        </div>
+
+                        <div class="option-item">
+                            <input type="radio" id="radioWeekly" name="notificationFreq" value="weekly">
+                            <label for="radioWeekly">Weekly Digest (Get a summary every Sunday)</label>
+                        </div>
+
+                        <div class="option-item">
+                            <input type="radio" id="radioMonthly" name="notificationFreq" value="monthly">
+                            <label for="radioMonthly">Monthly Newsletter (Monthly roundup of activities)</label>
+                        </div>
+
+                        <div class="option-item">
+                            <input type="radio" id="radioQuarterly" name="notificationFreq" value="quarterly">
+                            <label for="radioQuarterly">Quarterly Report (Four times a year)</label>
+                        </div>
+
+                        <div class="option-item">
+                            <input type="radio" id="radioNever" name="notificationFreq" value="never">
+                            <label for="radioNever">Opt Out (No notifications)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group-item">
+                    <label for="categorySelect">Select Category:</label>
+                    <select id="categorySelect" name="category">
+                        <option value="">Please select a category</option>
+                        <option value="tech">Technology</option>
+                        <option value="45" selected>Business</option>
+                        <option value="healthplus">Health & Wellness</option>
+                        <option value="education" selected>Education</option>
+                        <option value="entertainment">Entertainment</option>
+                    </select>
+                </div>
+                <!-- New multiple select -->
+                <div class="input-group-item">
+                    <label for="interestsSelect">Select Your Interests (Hold Ctrl/Cmd to select multiple):</label>
+                    <select id="interestsSelect" name="interests" multiple>
+                        <option value="web-development">Web Development</option>
+                        <option value="mobile-apps" selected>Mobile Apps</option>
+                        <option value="ai-ml">AI & Machine Learning</option>
+                        <option value="data-science" selected>Data Science</option>
+                    </select>
+                </div>
             </div>
             <button onclick="handleSubmit()" id="submitBtn">Add Item</button>
+            <input type="submit" value="Submit">
+            </form>
         </section>
 
         <!-- List of items -->

@@ -1,6 +1,13 @@
 {
     "items": [
         {
+            "id": 7,
+            "title": "New title",
+            "content": "New content",
+            "image": null,
+            "createdAt": "2024-11-07T11:14:08.433Z"
+        },
+        {
             "id": 6,
             "title": "This is a new update",
             "content": "This is the news content",
