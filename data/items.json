@@ -1,0 +1,43 @@
+{
+    "items": [
+        {
+            "id": 6,
+            "title": "This is a new update",
+            "content": "This is the news content",
+            "image": "uploads\/672b523f6eb16.jpg",
+            "createdAt": "2024-11-06T11:25:51.459Z"
+        },
+        {
+            "id": 5,
+            "title": "Latest new",
+            "content": "Latest new content",
+            "image": "uploads\/672b4cb628339.png",
+            "createdAt": "2024-11-06T11:02:14.166Z"
+        },
+        {
+            "id": 4,
+            "title": "New",
+            "content": "new",
+            "image": null,
+            "createdAt": "2024-11-06T11:00:36.964Z"
+        },
+        {
+            "id": 1,
+            "title": "Sample Title 1",
+            "content": "Sample content 1",
+            "updatedAt": "2024-11-06T10:55:16.819Z"
+        },
+        {
+            "id": 2,
+            "title": "Sample Title 2",
+            "content": "Sample content 2"
+        },
+        {
+            "id": 3,
+            "title": "bew",
+            "content": "new",
+            "image": "uploads\/672b4b9696a10.jpg",
+            "createdAt": "2024-11-06T10:57:26.619Z"
+        }
+    ]
+}
