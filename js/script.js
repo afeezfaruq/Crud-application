@@ -211,9 +211,33 @@ async function handleSubmit() {
     const contentInput = document.getElementById('contentInput');
     const imageInput = document.getElementById('imageInput');
     const editId = document.getElementById('editId');
-    
+
+
+   // <section class="form-container" id="formContainer" data-edit="false">
+
+
+   console.log(titleInput);
+    console.log('1 --------------------------------');
+    console.log(titleInput.getAttribute('edit'));
+    console.log(titleInput.getAttribute('disabled'));
+    console.log(titleInput.getAttribute('required'));
+    console.log(titleInput.getAttribute('type'));
+    console.log(titleInput.getAttribute('id'));
+    console.log(titleInput.getAttribute('placeholder'));
+    console.log(titleInput.getAttribute('value'));
+
+    console.log('2 --------------------------------');
+
+    console.log(titleInput.edit);
+    console.log(titleInput.disabled);
+    console.log(titleInput.required);
+    console.log(titleInput.type);
+    console.log(titleInput.id);
+    console.log(titleInput.placeholder);
+    console.log(titleInput.value);
+
     if (titleInput.value.trim() === '' || contentInput.value.trim() === '') {
-        alert('Please fill in both title and content');
+        //alert('Please fill in both title and content');
         return;
     }
 
@@ -249,6 +273,7 @@ async function handleSubmit() {
         submitBtn.textContent = 'Save';
     }
 }
-
+// Add form submit event listener
+document.getElementById('submitBtn').addEventListener('click', handleSubmit);
 // Add this line for debugging
 console.log('Current base URL:', new ItemManager().baseUrl); 

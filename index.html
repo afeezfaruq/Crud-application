@@ -13,24 +13,22 @@
 
     <main class="container">
         <!-- Form for adding/editing items -->
-        <section class="form-container">
-            <form method="POST" action="">
+        <section class="form-container" id="formContainer" data_edit="false">
             <input type="hidden" id="editId">
             <div class="input-group">
-                <input required type="text" id="titleInput" placeholder="Enter title" value="New title">
-                <input type="password" id="passwordInput" placeholder="Enter password" value="New password">
-                <input type="number" id="numberInput" placeholder="Enter number" value="23343">
-                <input type="email" id="emailInput" placeholder="Enter email" value="EMAIL@EXAMPLE.COM">
-                <textarea id="contentInput" placeholder="Enter content">New content</textarea>
+                <input edit="false" data-module="title" required type="text" id="titleInput" placeholder="Enter title" value="New title">
+                <input type="password" id="passwordInput" placeholder="Enter password">
+                <input type="number" id="numberInput" placeholder="Enter number">
+                <input type="email" id="emailInput" placeholder="Enter email">
+                <textarea id="contentInput" placeholder="Enter content"></textarea>
                 <div class="image-input">
                     <input type="file" id="imageInput" accept="image/*">
                     <small>Supported formats: JPG, PNG, GIF (max 2MB)</small>
                 </div>
-                <!-- Checkbox group -->
-                
+                <!-- Simplified checkbox group -->
                 <div class="radio-options">
                     <div class="option-item">
-                        <input type="checkbox" id="checkboxInput" name="agreement" value="1" checked>
+                        <input type="checkbox" id="checkboxInput" name="agreement">
                         <label for="checkboxInput">I agree to the terms and conditions</label>
                     </div>
                     <div class="option-item">
@@ -46,7 +44,7 @@
                             <label for="radioEmail">Email</label>
                         </div>
                         <div class="option-item">
-                            <input type="radio" id="radioPhone" name="contactMethod" value="phone" checked>
+                            <input type="radio" id="radioPhone" name="contactMethod" value="phone">
                             <label for="radioPhone">Phone</label>
                         </div>
                         <div class="option-item">
@@ -97,26 +95,23 @@
                     <select id="categorySelect" name="category">
                         <option value="">Please select a category</option>
                         <option value="tech">Technology</option>
-                        <option value="45" selected>Business</option>
-                        <option value="healthplus">Health & Wellness</option>
-                        <option value="education" selected>Education</option>
+                        <option value="business">Business</option>
+                        <option value="health">Health & Wellness</option>
+                        <option value="education">Education</option>
                         <option value="entertainment">Entertainment</option>
                     </select>
                 </div>
-                <!-- New multiple select -->
                 <div class="input-group-item">
                     <label for="interestsSelect">Select Your Interests (Hold Ctrl/Cmd to select multiple):</label>
                     <select id="interestsSelect" name="interests" multiple>
                         <option value="web-development">Web Development</option>
-                        <option value="mobile-apps" selected>Mobile Apps</option>
+                        <option value="mobile-apps">Mobile Apps</option>
                         <option value="ai-ml">AI & Machine Learning</option>
-                        <option value="data-science" selected>Data Science</option>
+                        <option value="data-science">Data Science</option>
                     </select>
                 </div>
             </div>
-            <button onclick="handleSubmit()" id="submitBtn">Add Item</button>
-            <input type="submit" value="Submit">
-            </form>
+            <button type="submit" id="submitBtn">Add Item</button>
         </section>
 
         <!-- List of items -->
